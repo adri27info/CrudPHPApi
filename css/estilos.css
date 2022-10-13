@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ----------------- INDEX.PHP  ----------------- */
+
+header {
+  width: 100%;
+  background-color: rgb(0, 136, 248);
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+div.contenedorInsertar {
+  border: 2px solid green;
+  border-radius: 3px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+div.contenedorInsertar a {
+  text-decoration: none;
+  color: black;
+}
+
+span.material-symbols-outlined.enlace_agregar {
+  color: green;
+}
+
+main {
+  width: 90%;
+  margin: 0px auto;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+table th {
+  text-decoration: underline;
+}
+
+table th,
+table td {
+  width: 20%;
+}
+
+table td.casilla_acciones {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+td.casilla_acciones a.enlace_editar {
+  color: blue;
+}
+
+td.casilla_acciones a.enlace_borrar {
+  color: red;
+}
+
+/* ----------------- INDEX.PHP / VENTANA DELETE  ----------------- */
+
+div.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #111111bd;
+  display: flex;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s 0.9s;
+  transform: translateY(-100vh);
+  transition: transform 0.5s;
+}
+
+div.modal div.contenedorModal {
+  margin: auto;
+  width: 90%;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+div.contenedorModal div.mensaje {
+  align-self: center;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+div.contenedorModal div.right {
+  align-self: flex-end;
+}
+
+div.contenedorModal div.center {
+  align-self: center;
+}
+
+div.center button.btnEliminar {
+  padding: 5px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+div.center button.btnCancelar {
+  padding: 5px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+div.contenedorModal div.containerDatos {
+  width: 90%;
+  margin: 20px auto;
+  text-align: center;
+  font-weight: bolder;
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  display: block;
+}
+
+/* ----------------- INSERTAR.PHP / ACTUALIZAR.PHP  ----------------- */
+
+main form.formulario {
+  width: 90%;
+  max-width: 500px;
+  padding: 10px;
+  margin: 50px auto;
+  border: 3px solid rgb(0, 136, 248);
+  border-radius: 10px;
+}
+
+form.formulario div {
+  background-color: rgb(1, 41, 74);
+  margin-bottom: 10px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 4px;
+  text-align: center;
+}
+
+form.formulario input[type="text"],
+form.formulario label {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  font-size: 15px;
+  text-align: center;
+}
+
+form.formularior label {
+  font-weight: bolder;
+}
+
+form.formulario input[type="text"] {
+  margin: 25px 0px 10px 0px;
+}
+
+form.formulario input[type="submit"] {
+  display: block;
+  margin: 30px 0px 0px 0px;
+  background-color: rgb(0, 136, 248);
+  color: white;
+  border-radius: 4px;
+  border: none;
+  padding: 5px;
+  width: 100%;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+main div.atras {
+  width: 90%;
+  margin: 0px auto;
+  text-align: center;
+}
+
+div.atras a {
+  color: black;
+  font-weight: bolder;
+}
+
+main div.containerDatos {
+  width: 90%;
+  margin: 20px auto;
+  text-align: center;
+  font-weight: bolder;
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ----------------- CLASES JS  ----------------- */
+
+form.formulario div.ocultar,
+div.containerDatos.ocultar,
+div.contenedorModal div.containerDatos.ocultar {
+  display: none;
+}
+
+div.modal.modal-open {
+  opacity: 1;
+  pointer-events: unset;
+  transition: opacity 0.1s;
+  transform: translateY(0);
+  transition: transform 0.5s 0.5s;
+}
+
+form.formulario input[type="submit"].desactivar {
+  background-color: rgb(157, 157, 157);
+  cursor: not-allowed;
+}
+
+/* ----------------- MEDIA QUERIES  ----------------- */
+
+@media screen and (max-width: 600px) {
+  table {
+    font-size: 14px;
+  }
+
+  form.formulario div {
+    gap: 5px;
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+}
