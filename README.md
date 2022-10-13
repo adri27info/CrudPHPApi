@@ -37,4 +37,4 @@ To run this project, we need the following steps:
 
 - Once inside the phpmyadmin database manager, you have to click the import option. You must select the sql file, which is located in the bbdd folder of this project, which is the following: https://github.com/adri27info/CrudPHPApi/blob/master/bbdd/crud_usuarios.sql
 
-- Once the database is imported through the sql file, we go to the project path, which will be found in the path: http://localhost/CrudPHPApi/index.php
+- Once the database is imported through the sql file, we go to the project path, which will be found in the path: http://localhost/CrudPHPApi/index.html
