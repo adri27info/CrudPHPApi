@@ -15,7 +15,7 @@ const validaciones = {
   telefono_usuario: false,
 };
 const containerDatos = document.getElementById("containerDatos");
-let link = "http://localhost:80/apps/php/CrudPHPApi/recursos/api.php";
+let link = "recursos/api.php";
 
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();

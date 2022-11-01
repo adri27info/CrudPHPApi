@@ -4,7 +4,7 @@ const btnCerrarModal = document.getElementById("btnCerrarModal");
 const btnCancelar = document.getElementById("btnCancelar");
 const btnEliminar = document.getElementById("btnEliminar");
 const containerDatos = document.getElementById("containerDatos");
-let url = "http://localhost:80/apps/php/CrudPHPApi/recursos/api.php";
+let url = "recursos/api.php";
 let spanMensajeBorrar = document.getElementById("spanMensajeBorrar");
 
 btnCerrarModal.addEventListener("click", cerrarModal);
