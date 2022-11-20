@@ -22,7 +22,7 @@ The project has been created with:
 
 - HTML
 - CSS
-- PHP > 7
+- PHP 7.4
 - JS - FETCH API
 
 ## Installation
